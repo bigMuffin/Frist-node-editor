@@ -18,6 +18,12 @@ router.get('/add', function(req, res) {
 	});
 });
 router.post('/add', function(req, res) {
+	if (!req.body.title || !req.body.content || !req.body.type || !req.body.author) {
+		res.render('news_add', {
+			msg: '添加失败，请检查未填项 '
+		});
+		return false
+	}
 	News.create({
 		title: req.body.title,
 		content: req.body.content,
