@@ -1,0 +1,7 @@
+﻿extends layout
+
+block content
+   a(href='/news') 新闻列表
+   h2.news-details-tit= data.title
+   .news-details= data.create_date
+   .news-details-con= data.content

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href='/news/add') 添加新闻
+  table
+   each news in newsData
+    tr
+     td= news.title
+     td!= news.content
+     td= news.type
+     td= news.author
+     td= news.create_date
+     td
+      a(href='/news/'+news._id) 详情
+     td
+      a.confirm(href='/news/del/'+news._id) 删除

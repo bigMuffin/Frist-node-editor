@@ -1,0 +1,21 @@
+﻿extends layout
+
+block content
+   a(href='/news') 新闻列表
+   form(aciton='/news/add',method='post')
+    lable 标题
+    input(rows="30",cols="50",type='textbox',name='title')
+    br
+    lable 内容
+    script#editor(name='content',type='text/plain',style='width:700px;height:300px;')
+    br
+    lable 作者
+    input(type='textbox',name='author')
+    br
+    lable 类型
+    input(type='textbox',name='type')
+    br
+    br
+    button(type='submit') 保存
+    br
+    label= msg

@@ -1,0 +1,16 @@
+body {
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+	display: block;
+	color: #00B7FF;
+	margin: 10px;
+}
+td {
+	border: 1px solid #000;
+	padding: 10px
+}
+img {
+	max-width: 300px
+}
